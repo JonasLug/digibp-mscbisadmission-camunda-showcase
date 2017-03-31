@@ -9,6 +9,8 @@
         <bpmn:flowNodeRef>EndEvent_0laxzyg</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>ExclusiveGateway_02qkbyr</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>StartEvent_ApplicationArrived</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>ServiceTask_InitialiseAdmissionCase</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_1o5976i</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_DecisionSystem" name="Decision System">
         <bpmn:flowNodeRef>CallActivity_CheckEligibilityDecision</bpmn:flowNodeRef>
@@ -23,7 +25,6 @@
         <bpmn:flowNodeRef>IntermediateCatchEvent_AdditionalDocumentsArrived</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>IntermediateThrowEvent_1r5o4pc</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>ExclusiveGateway_1lsatmk</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>ServiceTask_InitialiseAdmissionCase</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_AdmissionCommission" name="Admission&#10;Commission">
         <bpmn:flowNodeRef>UserTask_DecideForAcceptance</bpmn:flowNodeRef>
@@ -175,6 +176,7 @@
       <bpmn:incoming>SequenceFlow_1dchtv9</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1w782r2</bpmn:outgoing>
     </bpmn:serviceTask>
+    <bpmn:task id="Task_1o5976i" name="TEST" />
   </bpmn:process>
   <bpmn:message id="Message_0bp25nf" name="Message_ApplicationArrived" />
   <bpmn:message id="Message_1y4r32z" name="AdditionalDocumentsArrived" />
@@ -340,7 +342,7 @@
         <dc:Bounds x="124" y="35" width="1224" height="126" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="ServiceTask_0fu5qpo_di" bpmnElement="ServiceTask_InitialiseAdmissionCase">
-        <dc:Bounds x="204" y="217" width="100" height="80" />
+        <dc:Bounds x="246" y="55" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="IntermediateThrowEvent_1r5o4pc_di" bpmnElement="IntermediateThrowEvent_1r5o4pc">
         <dc:Bounds x="501" y="283" width="36" height="36" />
@@ -405,20 +407,17 @@
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_1w782r2_di" bpmnElement="SequenceFlow_1w782r2">
-        <di:waypoint xsi:type="dc:Point" x="304" y="257" />
-        <di:waypoint xsi:type="dc:Point" x="408" y="257" />
-        <di:waypoint xsi:type="dc:Point" x="408" y="120" />
+        <di:waypoint xsi:type="dc:Point" x="346" y="95" />
+        <di:waypoint xsi:type="dc:Point" x="383" y="95" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="311" y="242" width="90" height="0" />
+          <dc:Bounds x="319.5" y="80" width="90" height="0" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_1dchtv9_di" bpmnElement="SequenceFlow_1dchtv9">
-        <di:waypoint xsi:type="dc:Point" x="195" y="113" />
-        <di:waypoint xsi:type="dc:Point" x="195" y="165" />
-        <di:waypoint xsi:type="dc:Point" x="254" y="165" />
-        <di:waypoint xsi:type="dc:Point" x="254" y="217" />
+        <di:waypoint xsi:type="dc:Point" x="213" y="95" />
+        <di:waypoint xsi:type="dc:Point" x="246" y="95" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="179.5" y="150" width="90" height="0" />
+          <dc:Bounds x="184.5" y="80" width="90" height="0" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="EndEvent_0laxzyg_di" bpmnElement="EndEvent_0laxzyg">
@@ -451,6 +450,9 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="UserTask_0j6a9l9_di" bpmnElement="CallActivity_ValidateEligibility">
         <dc:Bounds x="836" y="498" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_1o5976i_di" bpmnElement="Task_1o5976i">
+        <dc:Bounds x="755" y="55" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
